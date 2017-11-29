@@ -9,7 +9,7 @@ const app     = express();
 app.use(express.static(__dirname + '/views'));
 app.use(express.static(__dirname + '/public'));
 
-app.set('port', (process.env.PORT || 8080));
+const server = app.listen(5000);
 
 app.get('/', (req, res) => {
     res.sendFile('index.html');
